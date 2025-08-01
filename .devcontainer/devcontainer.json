@@ -1,6 +1,6 @@
 {
 	// "name": "ros2_humble",
-	"remoteUser": "jiafeng",
+	"remoteUser": "skyris",
 	// 指定要运行的镜像
 	// "image": "jiaxiaofeng/ros2_humble_mac_m1:1.0",
 	// build image
@@ -10,8 +10,8 @@
     //         "USERNAME": "jiafeng"
     //     }
     // },
-	"workspaceFolder": "/home/jiafeng/ros/",
-	"workspaceMount": "source=${localWorkspaceFolder},target=/home/jiafeng/ros/,type=bind",
+	"workspaceFolder": "/home/skyris/ros/",
+	"workspaceMount": "source=${localWorkspaceFolder},target=/home/skyris/ros/,type=bind",
 	"customizations": {
 		"vscode": {
 			"extensions":[
@@ -38,7 +38,7 @@
 	// "source=${localWorkspaceFolder}/../cache/ROS2_FOXY/log,target=/home/jiafeng/ros/ws_humble/log,type=bind"
 	],
     // "postCreateCommand": "bash ./auto/auto_source.sh"
-    "postCreateCommand": " sudo chown -R jiafeng /home/jiafeng && bash /home/jiafeng/ros/auto/auto_source.sh"
+    "postCreateCommand": " sudo chown -R skyris /home/skyris && bash /home/skyris/ros/auto/auto_source.sh"
 	
 	
 }

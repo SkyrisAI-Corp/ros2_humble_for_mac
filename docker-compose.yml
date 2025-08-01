@@ -16,11 +16,11 @@ services:
     image: jiaxiaofeng/ros2_humble_mac_m1:1.0
     build: ./
     volumes: 
-      - ./:/home/jiafeng/ros 
+      - ./:/home/skyris/ros 
     environment:
       - DISPLAY=novnc:0.0
       - ROS_DOMAIN_ID=55
-      - --privileged=true
+    privileged: true
     networks:
       - x11
     stdin_open: true

@@ -8,7 +8,8 @@
 ### 
 
 docker run -itd --net=host \
-    -v ${pwd}/../../ws_humble:/home/jiafeng/ros \
+    -v ${pwd}/../../ws_humble:/home/skyris/ros \
+    -v ${pwd}/../../ros2_projects:/home/skyris/ros2_ws/src \
     -v /tmp/.X11-unix:/tmp/.X11-unix \
     -e DISPLAY=192.168.1.102:0 \
     -e GDK_SCALE \
@@ -19,5 +20,3 @@ docker run -itd --net=host \
     --privileged=true \
     jiaxiaofeng/ros2_humble_mac_m1:1.0 \
     /bin/bash
-
-
