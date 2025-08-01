@@ -8,7 +8,7 @@ RUN useradd -m -s /bin/bash skyris && \
 
 # 在root用户下执行需要管理员权限的操作
 USER root
-WORKDIR /home/skyris/ros/
+WORKDIR /home/skyris
 
 RUN cp /etc/apt/sources.list /etc/apt/sources.list.bak
 COPY . /home/skyris/ros/
@@ -67,8 +67,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 COPY scripts/setup_workspace.sh /home/skyris/setup_workspace.sh
 RUN chmod +x /home/skyris/setup_workspace.sh
 
-# 设置用户登录后的工作目录和ROS2环境
-RUN echo "cd /home/skyris/ros" >> /home/skyris/.bashrc
+# 设置用户登录后的ROS2环境（但不自动切换目录）
 RUN echo "source /opt/ros/humble/setup.bash" >> /home/skyris/.bashrc
 
 # 切换回skyris用户
